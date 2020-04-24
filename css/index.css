@@ -5216,14 +5216,6 @@ img {
   overflow-y: auto;
   max-height: 10.5rem;
 }
-body {
-  cursor: url("/img/default.cur"), default;
-}
-/**链接指针样式**/
-a:hover {
-  cursor: url("/img/pointer.cur"), pointer;
-}
-/*修改选择字体块背景颜色*/
 ::selection {
   background: #fff159;
   color: #222;
