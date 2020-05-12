@@ -561,11 +561,11 @@
             
             <tag> 学习 </tag>
             
+            <tag> 生活 </tag>
+            
             <tag> Hexo </tag>
             
             <tag> Next </tag>
-            
-            <tag> 生活 </tag>
             
         </tags>
       
@@ -587,6 +587,33 @@
             <tag> 学习 </tag>
             
             <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2020-记</title>
+      <link href="/2020/01/01/2020-%E8%AE%B0/"/>
+      <url>/2020/01/01/2020-%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-UshFKHjg" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","music":[{"title":"城南花已开","author":"三亩地","url":"http://music.163.com/song/media/outer/url?id=468176711.mp3","pic":"https://gitee.com/bao_xian_hong/Album/raw/master/image/音乐播放器.jpg"}]};  options.element = document.getElementById("aplayer-UshFKHjg");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><h1 id="2020年"><a href="#2020年" class="headerlink" title="2020年"></a>2020年</h1><h2 id="2020年5月"><a href="#2020年5月" class="headerlink" title="2020年5月"></a>2020年5月</h2><h3 id="2020年5月12日"><a href="#2020年5月12日" class="headerlink" title="2020年5月12日"></a>2020年5月12日</h3><p>今天是5月12日，汶川大地震12周年，刚刚看完纪录片，心里很不是滋味</p><p>敬畏生命，愿国泰民安<font size = 7 color = red>🕯</font></p><p><img src="/" class="lazyload" data-src="https://i3.sinaimg.cn/travel/2015/0511/U6986P704DT20150511152841.jpg"  alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> 日记 </tag>
             
         </tags>
       
