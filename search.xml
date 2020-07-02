@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>AlexNet</title>
+      <link href="/2020/07/02/AlexNet/"/>
+      <url>/2020/07/02/AlexNet/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>因为上个月准备考试，所以就没写博文，这篇是上个月交给人工智能工程伦理课的作业，所以现在发出来，凑个博文数哈哈哈</p><h1 id="01-网络结构"><a href="#01-网络结构" class="headerlink" title="01 网络结构"></a>01 网络结构</h1><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet1.png"  alt=""></p><h2 id="1-1第一层卷积池化层"><a href="#1-1第一层卷积池化层" class="headerlink" title="1.1第一层卷积池化层"></a>1.1第一层卷积池化层</h2><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet2.png"  alt=""></p><p><strong>卷积</strong>：第一层输入图像为<code>224*224*3</code>的图像，这样需要说明一下的就是，学术界普遍认为这里的<code>224*224*3</code>是不合适的，后面改成了<code>227*227*3</code>的大小，然后通过<code>11*11*3</code>的卷积核进行卷积运算，卷积核的步长（Stride）为4。第一层使用了96个<code>11*11*3</code>的卷积核，拆分成了两部分进行，每一部分各48个卷积核，分别在一个GPU上进行运行，所以采用的是双GPU系统，之后形成了<code>55*55*48</code>的像素层数据。</p><p><strong>池化</strong>：AlexNet采用重叠pooling池化层，池化类型采用最大池化，池化核为<code>3*3</code>，步长（Stride）为2，池化后生成尺寸为<code>27*27*96</code>分两组，每组48层。</p><p><strong>LRN局部响应归一化（Local Response Normalization）</strong>：将<code>27*27*96</code>分两组<code>27*27*48</code>进行局部归一化，分别在两个GPU上运行。</p><p><strong>激活函数</strong>：ReLU。</p><h2 id="1-2-第二层卷积池化层"><a href="#1-2-第二层卷积池化层" class="headerlink" title="1.2 第二层卷积池化层"></a>1.2 第二层卷积池化层</h2><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet2.png"  alt=""></p><p><strong>卷积</strong>：输入第一层输出的<code>27*27*96</code>的像素层分两部分<code>27*27*48</code>分别在不同的GPU上进行卷积运算，使用256个<code>5*5*48</code>的卷积核分两组对每一组<code>27*27*48</code>像素层进行卷积。</p><p><strong>池化</strong>：同样采用重叠池化，池化核<code>3*3</code>，步长为2，使<code>27*27*128</code>池化成<code>13*13*128</code>的像素层。</p><p><strong>LRN局部响应归一化（Local Response Normalization）</strong>：将<code>13*13*256</code>分两组<code>13*13*128</code>进行局部归一化，分别在两个GPU上运行。</p><p>激活函数：ReLU</p><h2 id="1-3-第三层卷积池化层"><a href="#1-3-第三层卷积池化层" class="headerlink" title="1.3 第三层卷积池化层"></a>1.3 第三层卷积池化层</h2><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet4.png"  alt=""></p><p><strong>卷积</strong>：输入第二层输出的<code>13*13*256</code>的像素层分两部分<code>13*13*128</code>分别在不同的GPU上进行卷积运算，使用384个<code>3*3*128</code>的卷积核分两组对每一组<code>13*13*128</code>像素层进行卷积，之后就有了<code>13*13*192</code>的两组像素层。</p><p><strong>激活函数</strong>：ReLU。</p><h2 id="1-4-第四层卷积层"><a href="#1-4-第四层卷积层" class="headerlink" title="1.4 第四层卷积层"></a>1.4 第四层卷积层</h2><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet5.png"  alt=""></p><p><strong>卷积</strong>：输入第三层输出的<code>13*13*384</code>的像素层分两部分<code>13*13*192</code>分别在不同的GPU上进行卷积运算，使用384个<code>3*3*192</code>的卷积核分两组对每一组<code>13*13*128</code>像素层进行卷积。</p><p><strong>激活函数</strong>：ReLU。</p><h2 id="1-5-第五层卷积池化层"><a href="#1-5-第五层卷积池化层" class="headerlink" title="1.5 第五层卷积池化层"></a>1.5 第五层卷积池化层</h2><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet6.png"  alt=""></p><p><strong>卷积</strong>：输入第四层输出的<code>13*13*384</code>的像素层，分两组<code>13*13*192</code>，使用256个<code>3*3*192</code>的卷积核对像素层进行卷积运算。</p><p><strong>池化</strong>：使用<code>3*3</code>的池化核，stride = 2，进行池化运算，输出<code>6*6*256</code>的像素层。</p><h2 id="1-6-全连接层"><a href="#1-6-全连接层" class="headerlink" title="1.6 全连接层"></a>1.6 全连接层</h2><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/AlexNet7.png"  alt=""></p><h1 id="02-创新点"><a href="#02-创新点" class="headerlink" title="02 创新点"></a>02 创新点</h1><p><strong>LRN局部响应归一化（Local Response Normalization）</strong>：LRN模拟的是生物学中侧抑制的功能，侧抑制指的是被激活的神经元会抑制相邻的神经元。</p><p>对输入激活函数的数据进行标准化，提高性能。</p><script type="math/tex; mode=display">\ b_{x,y}^i=a_{x,y}^i/(k+\alpha\sum_{j=max(0,i-n/2)}^{min(N-1,i+n/2)}{(a_{x,y}^j)}^2)</script><p>其中a表示在feature map中第i个卷积核（x，y）坐标经过了激活函数的输出，n表示相邻的几个卷积核。N表示这一层总的卷积核数量。k, n, α和β是hyper-parameters，他们的值是在验证集上实验得到的，其中k = 2，n = 5，α = 0.0001，β = 0.75。</p><p><strong>重叠池化（Overlapping Pooling）</strong>：重叠池化就是在池化操作上对部分像素进行重合，假设池化核大小为n*n，Stride = k，如果k = n，则是正常池化，如果k &lt; n则重叠池化，重叠池化具有避免过拟合的作用</p><p><strong>ReLU激活函数</strong>：AlexNet使用了ReLU激活函数，代替了sigmoid核tanh，ReLU的SGD收敛速度要比sigmoid和tanh快得多。</p><p><strong>数据增强</strong>：AlexNet使用了数据增强的方法来增加数据集的数量，从而达到防止过拟合的情况的发生。</p><p><strong>Dropout</strong>：结合预先训练好的许多不同模型，来进行预测是一种非常成功的减少测试误差的方式（Ensemble）。但因为每个模型的训练都需要花了好几天时间，因此这种做法对于大型神经网络来说太过昂贵。然而，AlexNet提出了一个非常有效的模型组合版本，它在训练中只需要花费两倍于单模型的时间。这种技术叫做Dropout，它做的就是以0.5的概率，将每个隐层神经元的输出设置为零。以这种方式“dropped out”的神经元既不参与前向传播，也不参与反向传播。所以每次输入一个样本，就相当于该神经网络就尝试了一个新的结构，但是所有这些结构之间共享权重。因为神经元不能依赖于其他特定神经元而存在，所以这种技术降低了神经元复杂的互适应关系。正因如此，网络需要被迫学习更为鲁棒的特征，这些特征在结合其他神经元的一些不同随机子集时有用。在测试时，我们将所有神经元的输出都仅仅只乘以0.5，对于获取指数级dropout网络产生的预测分布的几何平均值，这是一个合理的近似方法。前两个全连接层使用dropout。如果没有dropout，我们的网络会表现出大量的过拟合。dropout使收敛所需的迭代次数大致增加了一倍。Dropout方法和数据增强一样，都是防止过拟合的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 卷积神经网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML5+CSS3基础</title>
       <link href="/2020/05/27/HTML5-CSS3%E5%9F%BA%E7%A1%80/"/>
       <url>/2020/05/27/HTML5-CSS3%E5%9F%BA%E7%A1%80/</url>
@@ -238,9 +265,9 @@
       
         <tags>
             
-            <tag> 生活 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 生活 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -271,9 +298,9 @@
       
         <tags>
             
-            <tag> 生活 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 生活 </tag>
             
         </tags>
       
@@ -549,17 +576,17 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
-            <tag> 暴力 </tag>
-            
-            <tag> 搜索 </tag>
-            
             <tag> 学习 </tag>
             
             <tag> C++ </tag>
             
+            <tag> 算法 </tag>
+            
             <tag> 递归 </tag>
+            
+            <tag> 暴力 </tag>
+            
+            <tag> 搜索 </tag>
             
         </tags>
       
@@ -584,11 +611,11 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> 学习 </tag>
             
             <tag> C++ </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -644,9 +671,9 @@
       
         <tags>
             
-            <tag> 生活 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 生活 </tag>
             
             <tag> Hexo </tag>
             
@@ -669,9 +696,9 @@
       
         <tags>
             
-            <tag> 生活 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 生活 </tag>
             
         </tags>
       
@@ -684,7 +711,7 @@
       <link href="/2020/01/01/2020-%E8%AE%B0/"/>
       <url>/2020/01/01/2020-%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-YjuaIBid" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","music":[{"title":"城南花已开","author":"三亩地","url":"http://music.163.com/song/media/outer/url?id=468176711.mp3","pic":"https://gitee.com/bao_xian_hong/Album/raw/master/image/音乐播放器.jpg"}]};  options.element = document.getElementById("aplayer-YjuaIBid");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><h1 id="2020年"><a href="#2020年" class="headerlink" title="2020年"></a>2020年</h1><h2 id="2020年5月"><a href="#2020年5月" class="headerlink" title="2020年5月"></a>2020年5月</h2><h3 id="2020年5月12日"><a href="#2020年5月12日" class="headerlink" title="2020年5月12日"></a>2020年5月12日</h3><p>今天是5月12日，汶川大地震12周年，刚刚看完纪录片，心里很不是滋味</p><p>敬畏生命，愿国泰民安<font size = 7 color = red>🕯</font></p><p><img src="/" class="lazyload" data-src="https://i3.sinaimg.cn/travel/2015/0511/U6986P704DT20150511152841.jpg"  alt=""></p><h3 id="2020年5月13日"><a href="#2020年5月13日" class="headerlink" title="2020年5月13日"></a>2020年5月13日</h3><p>写一下自己对所谓的人工智能深度学习啥的认知（水平有限，只提自己的认知），感觉这些都华而不实，本科根本没办法通过这些找到工作，还是好好学习后端开发算了，这些啥的深度学习就用来跟老师做做项目啥的挺好用的，还有就是一些比赛也能用上</p><p>从今天开始还是要把Java提上日程了，早点完成结项专利的申请唉</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/互联网+1.png"  alt=""></p><p>今天互联网+创新创业大赛的通知下来了，进了校级决赛，海星，继续加油，准备好决赛答辩</p><h3 id="2020年5月14日"><a href="#2020年5月14日" class="headerlink" title="2020年5月14日"></a>2020年5月14日</h3><p>大物和线代都没课了，好爽，互联网+项目重拟一个名字参加校赛，想得头疼🙃</p><h3 id="2020年5月16日"><a href="#2020年5月16日" class="headerlink" title="2020年5月16日"></a>2020年5月16日</h3><p>蓝桥杯没有取消，所以，还是继续做点题吧orz🙃</p><h3 id="2020年5月19日"><a href="#2020年5月19日" class="headerlink" title="2020年5月19日"></a>2020年5月19日</h3><p>明天互联网+创新创业大赛的校赛决赛了，下午预言别人的都好厉害呀emmm</p><p>加油吧，冲冲冲</p><h3 id="2020年5月20日"><a href="#2020年5月20日" class="headerlink" title="2020年5月20日"></a>2020年5月20日</h3><p>输掉了，其实知道得分不会高，但是没想到那么低，不过没什么关系了，如果光我自己还好，输了就输了没啥所谓，只是觉得挺对不起队友的，明明付出了那么多时间，没什么回报，挺对不起他们的，以后尽量做一个人的事情，不打团队比赛了，或者说不以负责人的身份打了，唉，心里好愧疚，心情挺低落的</p><p>今天520，我表白我的祖国吧</p><p><img src="/" class="lazyload" data-src="https://n.sinaimg.cn/client/transform/20160207/Hgrn-fxpfhzk9093277.jpg"  alt=""></p><blockquote><p>愿祖国繁荣昌盛，国泰民安</p></blockquote><h3 id="2020年5月26日"><a href="#2020年5月26日" class="headerlink" title="2020年5月26日"></a>2020年5月26日</h3><p>HTML+CSS get√</p><h3 id="2020年5月28日"><a href="#2020年5月28日" class="headerlink" title="2020年5月28日"></a>2020年5月28日</h3><p>更换域名</p><blockquote><p>bxhong.cn</p></blockquote><p>二级域名</p><blockquote><p>blog.bxhong.cn</p></blockquote><h3 id="2020年6月1日"><a href="#2020年6月1日" class="headerlink" title="2020年6月1日"></a>2020年6月1日</h3><p>儿童节快乐</p><p>现在开始复习啦啦啦啦啦</p><p>太多作业啊，报告啊等等等了，喘不过气了</p><h3 id="2020年6月18日"><a href="#2020年6月18日" class="headerlink" title="2020年6月18日"></a>2020年6月18日</h3><p>终于报告完了网站与网页设计的期末报告</p><p>跳过一堆人直接到我是真的骚，措手不及🙃</p><blockquote><p>期末考试，等考完试再继续写博客😀</p></blockquote><h3 id="2020年7月2日"><a href="#2020年7月2日" class="headerlink" title="2020年7月2日"></a>2020年7月2日</h3><p>终于考完试了，哈哈哈哈哈（假装返校不用考试）</p><p>考完的成绩也出了，还行</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/微信图片_20200702161111.jpg"  alt=""></p><p>6号出发去昆明，到时候再写个记录的博文嘿嘿嘿</p><p>希望这个学期的均分能保持到85左右就很满足了</p><blockquote><p>7月10号英语考试</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-mGaRJKPK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","music":[{"title":"城南花已开","author":"三亩地","url":"http://music.163.com/song/media/outer/url?id=468176711.mp3","pic":"https://gitee.com/bao_xian_hong/Album/raw/master/image/音乐播放器.jpg"}]};  options.element = document.getElementById("aplayer-mGaRJKPK");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><h1 id="2020年"><a href="#2020年" class="headerlink" title="2020年"></a>2020年</h1><h2 id="2020年5月"><a href="#2020年5月" class="headerlink" title="2020年5月"></a>2020年5月</h2><h3 id="2020年5月12日"><a href="#2020年5月12日" class="headerlink" title="2020年5月12日"></a>2020年5月12日</h3><p>今天是5月12日，汶川大地震12周年，刚刚看完纪录片，心里很不是滋味</p><p>敬畏生命，愿国泰民安<font size = 7 color = red>🕯</font></p><p><img src="/" class="lazyload" data-src="https://i3.sinaimg.cn/travel/2015/0511/U6986P704DT20150511152841.jpg"  alt=""></p><h3 id="2020年5月13日"><a href="#2020年5月13日" class="headerlink" title="2020年5月13日"></a>2020年5月13日</h3><p>写一下自己对所谓的人工智能深度学习啥的认知（水平有限，只提自己的认知），感觉这些都华而不实，本科根本没办法通过这些找到工作，还是好好学习后端开发算了，这些啥的深度学习就用来跟老师做做项目啥的挺好用的，还有就是一些比赛也能用上</p><p>从今天开始还是要把Java提上日程了，早点完成结项专利的申请唉</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/互联网+1.png"  alt=""></p><p>今天互联网+创新创业大赛的通知下来了，进了校级决赛，海星，继续加油，准备好决赛答辩</p><h3 id="2020年5月14日"><a href="#2020年5月14日" class="headerlink" title="2020年5月14日"></a>2020年5月14日</h3><p>大物和线代都没课了，好爽，互联网+项目重拟一个名字参加校赛，想得头疼🙃</p><h3 id="2020年5月16日"><a href="#2020年5月16日" class="headerlink" title="2020年5月16日"></a>2020年5月16日</h3><p>蓝桥杯没有取消，所以，还是继续做点题吧orz🙃</p><h3 id="2020年5月19日"><a href="#2020年5月19日" class="headerlink" title="2020年5月19日"></a>2020年5月19日</h3><p>明天互联网+创新创业大赛的校赛决赛了，下午预言别人的都好厉害呀emmm</p><p>加油吧，冲冲冲</p><h3 id="2020年5月20日"><a href="#2020年5月20日" class="headerlink" title="2020年5月20日"></a>2020年5月20日</h3><p>输掉了，其实知道得分不会高，但是没想到那么低，不过没什么关系了，如果光我自己还好，输了就输了没啥所谓，只是觉得挺对不起队友的，明明付出了那么多时间，没什么回报，挺对不起他们的，以后尽量做一个人的事情，不打团队比赛了，或者说不以负责人的身份打了，唉，心里好愧疚，心情挺低落的</p><p>今天520，我表白我的祖国吧</p><p><img src="/" class="lazyload" data-src="https://n.sinaimg.cn/client/transform/20160207/Hgrn-fxpfhzk9093277.jpg"  alt=""></p><blockquote><p>愿祖国繁荣昌盛，国泰民安</p></blockquote><h3 id="2020年5月26日"><a href="#2020年5月26日" class="headerlink" title="2020年5月26日"></a>2020年5月26日</h3><p>HTML+CSS get√</p><h3 id="2020年5月28日"><a href="#2020年5月28日" class="headerlink" title="2020年5月28日"></a>2020年5月28日</h3><p>更换域名</p><blockquote><p>bxhong.cn</p></blockquote><p>二级域名</p><blockquote><p>blog.bxhong.cn</p></blockquote><h3 id="2020年6月1日"><a href="#2020年6月1日" class="headerlink" title="2020年6月1日"></a>2020年6月1日</h3><p>儿童节快乐</p><p>现在开始复习啦啦啦啦啦</p><p>太多作业啊，报告啊等等等了，喘不过气了</p><h3 id="2020年6月18日"><a href="#2020年6月18日" class="headerlink" title="2020年6月18日"></a>2020年6月18日</h3><p>终于报告完了网站与网页设计的期末报告</p><p>跳过一堆人直接到我是真的骚，措手不及🙃</p><blockquote><p>期末考试，等考完试再继续写博客😀</p></blockquote><h3 id="2020年7月2日"><a href="#2020年7月2日" class="headerlink" title="2020年7月2日"></a>2020年7月2日</h3><p>终于考完试了，哈哈哈哈哈（假装返校不用考试）</p><p>考完的成绩也出了，还行，C语言期末98也带不动74的平时分🙃</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/微信图片_20200702161111.jpg"  width="50%"></p><p>6号出发去昆明，到时候再写个记录的博文嘿嘿嘿</p><p>希望这个学期的均分能保持到85左右就很满足了</p><blockquote><p>7月10号英语考试</p></blockquote>]]></content>
       
       
       <categories>
