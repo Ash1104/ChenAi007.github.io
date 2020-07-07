@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>昆明</title>
+      <link href="/2020/07/07/%E6%98%86%E6%98%8E/"/>
+      <url>/2020/07/07/%E6%98%86%E6%98%8E/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="2020年7月6日"><a href="#2020年7月6日" class="headerlink" title="2020年7月6日"></a>2020年7月6日</h1><p>韶关东站等了5个小时的车，太难顶了</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明1.jpg"  alt=""></p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明8.jpg"  alt=""></p><h1 id="2020年7月7日"><a href="#2020年7月7日" class="headerlink" title="2020年7月7日"></a>2020年7月7日</h1><p>早上9点15抵达昆明，飞机上好冷，由于12点入住，所以先去吃了午饭</p><p>住处很脏，清洁阿姨正在打扫</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明2.jpg"  alt=""></p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明3.jpg"  alt=""></p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明4.jpg"  alt=""></p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明6.jpg"  alt=""></p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/昆明7.jpg"  alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> 旅行 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>InfantryVision</title>
+      <link href="/2020/07/04/InfantryVision/"/>
+      <url>/2020/07/04/InfantryVision/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="参数配置Settings-h"><a href="#参数配置Settings-h" class="headerlink" title="参数配置Settings.h"></a>参数配置Settings.h</h1><hr><h2 id="宏定义-全局"><a href="#宏定义-全局" class="headerlink" title="宏定义-全局"></a>宏定义-全局</h2><h3 id="DEBUG-MODE"><a href="#DEBUG-MODE" class="headerlink" title="DEBUG_MODE"></a>DEBUG_MODE</h3><ul><li>调试模式</li></ul><h3 id="SAVE-PIC"><a href="#SAVE-PIC" class="headerlink" title="SAVE_PIC"></a>SAVE_PIC</h3><ul><li><p>【0】自动截图</p></li><li><p>【1】按键截图</p></li></ul><h3 id="USE-VIDEO"><a href="#USE-VIDEO" class="headerlink" title="USE_VIDEO"></a>USE_VIDEO</h3><ul><li><p>【0】摄像头/视频</p></li><li><p>【1】图片</p></li><li><p>【2】摄像头多线程</p></li><li><p>【3】迈德威视摄像头</p></li></ul><h3 id="SHOW-RADIO"><a href="#SHOW-RADIO" class="headerlink" title="SHOW_RADIO"></a>SHOW_RADIO</h3><ul><li>【1】显示比例</li></ul><h3 id="USE-SERIAL"><a href="#USE-SERIAL" class="headerlink" title="USE_SERIAL"></a>USE_SERIAL</h3><ul><li>【1】使用串口</li></ul><h3 id="USE-GRAVITY-COMPENSATE"><a href="#USE-GRAVITY-COMPENSATE" class="headerlink" title="USE_GRAVITY_COMPENSATE"></a>USE_GRAVITY_COMPENSATE</h3><ul><li>【1】重力补偿角度</li></ul><h3 id="PREDICT-TYPE"><a href="#PREDICT-TYPE" class="headerlink" title="PREDICT_TYPE"></a>PREDICT_TYPE</h3><ul><li><p>【0】no</p></li><li><p>【1】KALMAN</p></li><li><p>【2】predict</p></li><li><p>【3】bayes</p></li></ul><hr><h2 id="宏定义-调试模块"><a href="#宏定义-调试模块" class="headerlink" title="宏定义-调试模块"></a>宏定义-调试模块</h2><h3 id="VIDEO-PATH"><a href="#VIDEO-PATH" class="headerlink" title="VIDEO_PATH"></a>VIDEO_PATH</h3><ul><li>测试视频路径</li></ul><h3 id="PIC-PATH"><a href="#PIC-PATH" class="headerlink" title="PIC_PATH"></a>PIC_PATH</h3><ul><li>测试图片路径</li></ul><h3 id="WIN-NAME-ARMORP-PREPROCESS"><a href="#WIN-NAME-ARMORP-PREPROCESS" class="headerlink" title="WIN_NAME_ARMORP_PREPROCESS"></a>WIN_NAME_ARMORP_PREPROCESS</h3><ul><li>灯条预处理调试</li></ul><h3 id="WIN-NAME-ARMORP-TARGET"><a href="#WIN-NAME-ARMORP-TARGET" class="headerlink" title="WIN_NAME_ARMORP_TARGET"></a>WIN_NAME_ARMORP_TARGET</h3><ul><li>灯条调试</li></ul><h3 id="WIN-NAME-ARMORP"><a href="#WIN-NAME-ARMORP" class="headerlink" title="WIN_NAME_ARMORP"></a>WIN_NAME_ARMORP</h3><ul><li>小装甲板调试</li></ul><h3 id="WIN-NAME-RUNEP"><a href="#WIN-NAME-RUNEP" class="headerlink" title="WIN_NAME_RUNEP"></a>WIN_NAME_RUNEP</h3><ul><li>神符调试</li></ul><h3 id="WIN-NAME-RUNEP-R"><a href="#WIN-NAME-RUNEP-R" class="headerlink" title="WIN_NAME_RUNEP_R"></a>WIN_NAME_RUNEP_R</h3><ul><li>神符调试 - 中心</li></ul><h3 id="WIN-NAME-RUNEP-A"><a href="#WIN-NAME-RUNEP-A" class="headerlink" title="WIN_NAME_RUNEP_A"></a>WIN_NAME_RUNEP_A</h3><ul><li>神符调试 - 已激活</li></ul><h3 id="WIN-NAME-RUNEP-L"><a href="#WIN-NAME-RUNEP-L" class="headerlink" title="WIN_NAME_RUNEP_L"></a>WIN_NAME_RUNEP_L</h3><ul><li>神符调试 - 待激活神符（缺角）</li></ul><h3 id="WIN-NAME-RUNEP-LA"><a href="#WIN-NAME-RUNEP-LA" class="headerlink" title="WIN_NAME_RUNEP_LA"></a>WIN_NAME_RUNEP_LA</h3><ul><li>神符调试 - 神符装甲板（缺角）</li></ul><h3 id="WIN-NAME-VISUALPID"><a href="#WIN-NAME-VISUALPID" class="headerlink" title="WIN_NAME_VISUALPID"></a>WIN_NAME_VISUALPID</h3><ul><li>pid调试</li></ul><h3 id="WIN-NAME-KALMAN"><a href="#WIN-NAME-KALMAN" class="headerlink" title="WIN_NAME_KALMAN"></a>WIN_NAME_KALMAN</h3><ul><li>卡尔曼滤波调试</li></ul><h3 id="SHOW-WIDTH"><a href="#SHOW-WIDTH" class="headerlink" title="SHOW_WIDTH"></a>SHOW_WIDTH</h3><ul><li>752</li></ul><h3 id="SHOW-HEIGHT"><a href="#SHOW-HEIGHT" class="headerlink" title="SHOW_HEIGHT"></a>SHOW_HEIGHT</h3><ul><li>480</li></ul><h3 id="DATA-BUFF-ROW-SIZE-MAX"><a href="#DATA-BUFF-ROW-SIZE-MAX" class="headerlink" title="DATA_BUFF_ROW_SIZE_MAX"></a>DATA_BUFF_ROW_SIZE_MAX</h3><ul><li>5</li></ul><h3 id="DATA-BUFF-COL-SIZE-MAX"><a href="#DATA-BUFF-COL-SIZE-MAX" class="headerlink" title="DATA_BUFF_COL_SIZE_MAX"></a>DATA_BUFF_COL_SIZE_MAX</h3><ul><li>1200</li></ul><hr><h2 id="HERO-Infantry-Sentinel"><a href="#HERO-Infantry-Sentinel" class="headerlink" title="HERO/Infantry/Sentinel"></a>HERO/Infantry/Sentinel</h2><h3 id="PATH-OTHER-PATH"><a href="#PATH-OTHER-PATH" class="headerlink" title="PATH_OTHER_PATH"></a>PATH_OTHER_PATH</h3><ul><li>全局配置文件路径</li></ul><h3 id="PATH-ARMOR-PATH"><a href="#PATH-ARMOR-PATH" class="headerlink" title="PATH_ARMOR_PATH"></a>PATH_ARMOR_PATH</h3><ul><li>装甲板配置文件路径</li></ul><h3 id="PATH-RUNE-PATH"><a href="#PATH-RUNE-PATH" class="headerlink" title="PATH_RUNE_PATH"></a>PATH_RUNE_PATH</h3><ul><li>神符配置文件路径</li></ul><h3 id="PARAM-VISUAL-PID-PATH"><a href="#PARAM-VISUAL-PID-PATH" class="headerlink" title="PARAM_VISUAL_PID_PATH"></a>PARAM_VISUAL_PID_PATH</h3><ul><li>pid配置文件路径</li></ul><h3 id="PARAM-KALMAN-PATH"><a href="#PARAM-KALMAN-PATH" class="headerlink" title="PARAM_KALMAN_PATH"></a>PARAM_KALMAN_PATH</h3><ul><li>卡尔曼滤波配置文件路径</li></ul><h3 id="PARAM-CALIBRATION-752"><a href="#PARAM-CALIBRATION-752" class="headerlink" title="PARAM_CALIBRATION_752"></a>PARAM_CALIBRATION_752</h3><ul><li>相机参数</li></ul><h3 id="ARMOR-LEFT"><a href="#ARMOR-LEFT" class="headerlink" title="ARMOR_LEFT"></a>ARMOR_LEFT</h3><h3 id="SAVE-PIC-DIR"><a href="#SAVE-PIC-DIR" class="headerlink" title="SAVE_PIC_DIR"></a>SAVE_PIC_DIR</h3><h3 id="ARMOR-TEMPLATE-PATH"><a href="#ARMOR-TEMPLATE-PATH" class="headerlink" title="ARMOR_TEMPLATE_PATH"></a>ARMOR_TEMPLATE_PATH</h3><hr><h2 id="宏定义-键盘指令"><a href="#宏定义-键盘指令" class="headerlink" title="宏定义-键盘指令"></a>宏定义-键盘指令</h2><h3 id="KEY-SAVE-VIDEO"><a href="#KEY-SAVE-VIDEO" class="headerlink" title="KEY_SAVE_VIDEO"></a>KEY_SAVE_VIDEO</h3><ul><li>【76-v】开始、结束录视频</li></ul><h3 id="KEY-SAVE-RESULT"><a href="#KEY-SAVE-RESULT" class="headerlink" title="KEY_SAVE_RESULT"></a>KEY_SAVE_RESULT</h3><ul><li>【70-p】截图</li></ul><h3 id="KEY-SAVE-PARAM"><a href="#KEY-SAVE-PARAM" class="headerlink" title="KEY_SAVE_PARAM"></a>KEY_SAVE_PARAM</h3><ul><li>【115-z】保存参数</li></ul><hr><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> RoboMaster </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> RoboMaster </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AlexNet</title>
       <link href="/2020/07/02/AlexNet/"/>
       <url>/2020/07/02/AlexNet/</url>
@@ -267,9 +321,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 生活 </tag>
-            
             <tag> 深度学习 </tag>
+            
+            <tag> 生活 </tag>
             
             <tag> python </tag>
             
@@ -644,9 +698,9 @@
             
             <tag> 深度学习 </tag>
             
-            <tag> Python </tag>
-            
             <tag> RoboMaster </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -711,7 +765,7 @@
       <link href="/2020/01/01/2020-%E8%AE%B0/"/>
       <url>/2020/01/01/2020-%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-mGaRJKPK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","music":[{"title":"城南花已开","author":"三亩地","url":"http://music.163.com/song/media/outer/url?id=468176711.mp3","pic":"https://gitee.com/bao_xian_hong/Album/raw/master/image/音乐播放器.jpg"}]};  options.element = document.getElementById("aplayer-mGaRJKPK");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><h1 id="2020年"><a href="#2020年" class="headerlink" title="2020年"></a>2020年</h1><h2 id="2020年5月"><a href="#2020年5月" class="headerlink" title="2020年5月"></a>2020年5月</h2><h3 id="2020年5月12日"><a href="#2020年5月12日" class="headerlink" title="2020年5月12日"></a>2020年5月12日</h3><p>今天是5月12日，汶川大地震12周年，刚刚看完纪录片，心里很不是滋味</p><p>敬畏生命，愿国泰民安<font size = 7 color = red>🕯</font></p><p><img src="/" class="lazyload" data-src="https://i3.sinaimg.cn/travel/2015/0511/U6986P704DT20150511152841.jpg"  alt=""></p><h3 id="2020年5月13日"><a href="#2020年5月13日" class="headerlink" title="2020年5月13日"></a>2020年5月13日</h3><p>写一下自己对所谓的人工智能深度学习啥的认知（水平有限，只提自己的认知），感觉这些都华而不实，本科根本没办法通过这些找到工作，还是好好学习后端开发算了，这些啥的深度学习就用来跟老师做做项目啥的挺好用的，还有就是一些比赛也能用上</p><p>从今天开始还是要把Java提上日程了，早点完成结项专利的申请唉</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/互联网+1.png"  alt=""></p><p>今天互联网+创新创业大赛的通知下来了，进了校级决赛，海星，继续加油，准备好决赛答辩</p><h3 id="2020年5月14日"><a href="#2020年5月14日" class="headerlink" title="2020年5月14日"></a>2020年5月14日</h3><p>大物和线代都没课了，好爽，互联网+项目重拟一个名字参加校赛，想得头疼🙃</p><h3 id="2020年5月16日"><a href="#2020年5月16日" class="headerlink" title="2020年5月16日"></a>2020年5月16日</h3><p>蓝桥杯没有取消，所以，还是继续做点题吧orz🙃</p><h3 id="2020年5月19日"><a href="#2020年5月19日" class="headerlink" title="2020年5月19日"></a>2020年5月19日</h3><p>明天互联网+创新创业大赛的校赛决赛了，下午预言别人的都好厉害呀emmm</p><p>加油吧，冲冲冲</p><h3 id="2020年5月20日"><a href="#2020年5月20日" class="headerlink" title="2020年5月20日"></a>2020年5月20日</h3><p>输掉了，其实知道得分不会高，但是没想到那么低，不过没什么关系了，如果光我自己还好，输了就输了没啥所谓，只是觉得挺对不起队友的，明明付出了那么多时间，没什么回报，挺对不起他们的，以后尽量做一个人的事情，不打团队比赛了，或者说不以负责人的身份打了，唉，心里好愧疚，心情挺低落的</p><p>今天520，我表白我的祖国吧</p><p><img src="/" class="lazyload" data-src="https://n.sinaimg.cn/client/transform/20160207/Hgrn-fxpfhzk9093277.jpg"  alt=""></p><blockquote><p>愿祖国繁荣昌盛，国泰民安</p></blockquote><h3 id="2020年5月26日"><a href="#2020年5月26日" class="headerlink" title="2020年5月26日"></a>2020年5月26日</h3><p>HTML+CSS get√</p><h3 id="2020年5月28日"><a href="#2020年5月28日" class="headerlink" title="2020年5月28日"></a>2020年5月28日</h3><p>更换域名</p><blockquote><p>bxhong.cn</p></blockquote><p>二级域名</p><blockquote><p>blog.bxhong.cn</p></blockquote><h3 id="2020年6月1日"><a href="#2020年6月1日" class="headerlink" title="2020年6月1日"></a>2020年6月1日</h3><p>儿童节快乐</p><p>现在开始复习啦啦啦啦啦</p><p>太多作业啊，报告啊等等等了，喘不过气了</p><h3 id="2020年6月18日"><a href="#2020年6月18日" class="headerlink" title="2020年6月18日"></a>2020年6月18日</h3><p>终于报告完了网站与网页设计的期末报告</p><p>跳过一堆人直接到我是真的骚，措手不及🙃</p><blockquote><p>期末考试，等考完试再继续写博客😀</p></blockquote><h3 id="2020年7月2日"><a href="#2020年7月2日" class="headerlink" title="2020年7月2日"></a>2020年7月2日</h3><p>终于考完试了，哈哈哈哈哈（假装返校不用考试）</p><p>考完的成绩也出了，还行，C语言期末98也带不动74的平时分🙃</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/微信图片_20200702161111.jpg"  width="50%"></p><p>6号出发去昆明，到时候再写个记录的博文嘿嘿嘿</p><p>希望这个学期的均分能保持到85左右就很满足了</p><blockquote><p>7月10号英语考试</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-nwztOlpe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","music":[{"title":"城南花已开","author":"三亩地","url":"http://music.163.com/song/media/outer/url?id=468176711.mp3","pic":"https://gitee.com/bao_xian_hong/Album/raw/master/image/音乐播放器.jpg"}]};  options.element = document.getElementById("aplayer-nwztOlpe");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><h1 id="2020年"><a href="#2020年" class="headerlink" title="2020年"></a>2020年</h1><h2 id="2020年5月"><a href="#2020年5月" class="headerlink" title="2020年5月"></a>2020年5月</h2><h3 id="2020年5月12日"><a href="#2020年5月12日" class="headerlink" title="2020年5月12日"></a>2020年5月12日</h3><p>今天是5月12日，汶川大地震12周年，刚刚看完纪录片，心里很不是滋味</p><p>敬畏生命，愿国泰民安<font size = 7 color = red>🕯</font></p><p><img src="/" class="lazyload" data-src="https://i3.sinaimg.cn/travel/2015/0511/U6986P704DT20150511152841.jpg"  alt=""></p><h3 id="2020年5月13日"><a href="#2020年5月13日" class="headerlink" title="2020年5月13日"></a>2020年5月13日</h3><p>写一下自己对所谓的人工智能深度学习啥的认知（水平有限，只提自己的认知），感觉这些都华而不实，本科根本没办法通过这些找到工作，还是好好学习后端开发算了，这些啥的深度学习就用来跟老师做做项目啥的挺好用的，还有就是一些比赛也能用上</p><p>从今天开始还是要把Java提上日程了，早点完成结项专利的申请唉</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/互联网+1.png"  alt=""></p><p>今天互联网+创新创业大赛的通知下来了，进了校级决赛，海星，继续加油，准备好决赛答辩</p><h3 id="2020年5月14日"><a href="#2020年5月14日" class="headerlink" title="2020年5月14日"></a>2020年5月14日</h3><p>大物和线代都没课了，好爽，互联网+项目重拟一个名字参加校赛，想得头疼🙃</p><h3 id="2020年5月16日"><a href="#2020年5月16日" class="headerlink" title="2020年5月16日"></a>2020年5月16日</h3><p>蓝桥杯没有取消，所以，还是继续做点题吧orz🙃</p><h3 id="2020年5月19日"><a href="#2020年5月19日" class="headerlink" title="2020年5月19日"></a>2020年5月19日</h3><p>明天互联网+创新创业大赛的校赛决赛了，下午预言别人的都好厉害呀emmm</p><p>加油吧，冲冲冲</p><h3 id="2020年5月20日"><a href="#2020年5月20日" class="headerlink" title="2020年5月20日"></a>2020年5月20日</h3><p>输掉了，其实知道得分不会高，但是没想到那么低，不过没什么关系了，如果光我自己还好，输了就输了没啥所谓，只是觉得挺对不起队友的，明明付出了那么多时间，没什么回报，挺对不起他们的，以后尽量做一个人的事情，不打团队比赛了，或者说不以负责人的身份打了，唉，心里好愧疚，心情挺低落的</p><p>今天520，我表白我的祖国吧</p><p><img src="/" class="lazyload" data-src="https://n.sinaimg.cn/client/transform/20160207/Hgrn-fxpfhzk9093277.jpg"  alt=""></p><blockquote><p>愿祖国繁荣昌盛，国泰民安</p></blockquote><h3 id="2020年5月26日"><a href="#2020年5月26日" class="headerlink" title="2020年5月26日"></a>2020年5月26日</h3><p>HTML+CSS get√</p><h3 id="2020年5月28日"><a href="#2020年5月28日" class="headerlink" title="2020年5月28日"></a>2020年5月28日</h3><p>更换域名</p><blockquote><p>bxhong.cn</p></blockquote><p>二级域名</p><blockquote><p>blog.bxhong.cn</p></blockquote><h2 id="2020年6月"><a href="#2020年6月" class="headerlink" title="2020年6月"></a>2020年6月</h2><h3 id="2020年6月1日"><a href="#2020年6月1日" class="headerlink" title="2020年6月1日"></a>2020年6月1日</h3><p>儿童节快乐</p><p>现在开始复习啦啦啦啦啦</p><p>太多作业啊，报告啊等等等了，喘不过气了</p><h3 id="2020年6月18日"><a href="#2020年6月18日" class="headerlink" title="2020年6月18日"></a>2020年6月18日</h3><p>终于报告完了网站与网页设计的期末报告</p><p>跳过一堆人直接到我是真的骚，措手不及🙃</p><blockquote><p>期末考试，等考完试再继续写博客😀</p></blockquote><h2 id="2020年7月"><a href="#2020年7月" class="headerlink" title="2020年7月"></a>2020年7月</h2><h3 id="2020年7月2日"><a href="#2020年7月2日" class="headerlink" title="2020年7月2日"></a>2020年7月2日</h3><p>终于考完试了，哈哈哈哈哈（假装返校不用考试）</p><p>考完的成绩也出了，还行，C语言期末98也带不动74的平时分🙃</p><p><img src="/" class="lazyload" data-src="https://gitee.com/bao_xian_hong/Album/raw/master/image/微信图片_20200702161111.jpg"  width="50%"></p><p>6号出发去昆明，到时候再写个记录的博文嘿嘿嘿</p><p>希望这个学期的均分能保持到85左右就很满足了</p><blockquote><p>7月10号英语考试</p></blockquote><h3 id="2020年7月3日"><a href="#2020年7月3日" class="headerlink" title="2020年7月3日"></a>2020年7月3日</h3><p>继续看战队代码啦~~~</p>]]></content>
       
       
       <categories>
